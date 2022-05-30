@@ -2,6 +2,6 @@
 config.py
 
 # Игнорировать сопутствующие каталоги
-__pycache__
-service
-voice
+__pycache__/
+service/
+voice/
