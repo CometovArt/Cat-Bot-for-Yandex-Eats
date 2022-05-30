@@ -1,8 +1,9 @@
 # Слова, которые кот слушает
 # Нужно как-то настроить обработку без регистра
-listen_talk = '([К,к]ис|[К,к]ц|[М,м]ур|[К,к]с|[К,к]от|[М,м]яу|[Ц,ц]ап|[М,м]рррр|[Н,н]яа|[М,м]ьяв|[М,м]иау|[М,м]ееееу|[М,м]рррррррау!|Шшш|[М,м]иао|[М,м]ъяу|Мя|Мф|Мрмрмрмрмрмр|[К,к]усь|цап|хвать|жрать)'
-listen_woof = '[Г,г]ав'
+listen_talk = '(кис|Кис|кц|Кц|Мур|мур|кс|Кс|Кот|кот|Мяу|мяу|Цап|Мяяяяяяяяяу|Мрррр|Няа|Мьяв|Миау|Мееееу|Мрррррррау!|Шшш|Миао|Мъяу|Мя|Мф|Мрмрмрмрмрмр|кусь|цап|хвать|жрать)'
+listen_woof = '(гав|Гав)'
 
+# Кот умеет говорить это:
 talk = [
             'Мяу!',
             'Мяяяяяяяяяу',
@@ -32,6 +33,74 @@ talk = [
             'Мяу',
             'Ну допустим мяу'
             ]
+
+
+voice = [
+            'mew1.ogg',
+            'mew2.ogg',
+            'mew3.ogg',
+            'mew4.ogg',
+            'mew5.ogg',
+            'mew6.ogg',
+            'mew7.ogg',
+            'mew8.ogg',
+            'mew9.ogg',
+            'mew10.ogg',
+            'mew11.ogg',
+            'mew12.ogg',
+            'mew13.ogg',
+            'mew14.ogg',
+            'mew15.ogg',
+            'mew16.ogg',
+            'mew17.ogg',
+            'mew18.ogg',
+            'mew19.ogg',
+            'mew20.ogg',
+            'mew21.ogg',
+            'mew22.ogg',
+            'mew23.ogg',
+            'mew24.ogg',
+            'mew25.ogg',
+            'mew26.ogg',
+            'mew27.ogg',
+            'mew28.ogg',
+            'mew29.ogg',
+            'mew30.ogg',
+            'mew31.ogg',
+            'mew32.ogg',
+            'mew33.ogg',
+            'mew34.ogg',
+            'mew35.ogg',
+            'mew36.ogg',
+            'mew37.ogg',
+            'mew38.ogg',
+            'mew39.ogg',
+            'mew40.ogg',
+            'mew41.ogg',
+            'mew42.ogg',
+            'mew43.ogg',
+            'mew44.ogg',
+            'mew45.ogg',
+            'mew46.ogg',
+            'mew47.ogg',
+            'mew48.ogg',
+            'mew49.ogg'
+            ]
+
+shh = [
+            'mew49.ogg',
+            'mew14.ogg',
+            'mew48.ogg',
+            'mew15.ogg',
+            'mew47.ogg',
+            'mew13.ogg',
+            'mew40.ogg',
+            'mew41.ogg',
+            'mew42.ogg',
+            'mew43.ogg',
+            'mew16.ogg'
+            ]
+
 
 sticker = [
             'CAACAgEAAxkBAAEEih5iYw04LuTSvdpNTRmPitiw8pPAMQACRQ8AAtkRQUdD8HMvdvRwJiQE',
@@ -134,70 +203,4 @@ sticker = [
             'CAACAgQAAxkBAAEEinRiYw4wWKXw16VEwdhP1uk4CUHOzgACFgsAAowroVMUqbCKqWMUTSQE',
             'CAACAgQAAxkBAAEEinxiYw5A6kJkxoPg1moMAxeHrmDxyQACzAkAAk-tiFBazDYsz70mmCQE',
             'CAACAgQAAxkBAAEEinZiYw4yIK23gY-heKoaXHsxdP36RAACqgsAAt_piFHhNwot1ddG_SQE'
-            ]
-
-voice = [
-            'mew1.ogg',
-            'mew2.ogg',
-            'mew3.ogg',
-            'mew4.ogg',
-            'mew5.ogg',
-            'mew6.ogg',
-            'mew7.ogg',
-            'mew8.ogg',
-            'mew9.ogg',
-            'mew10.ogg',
-            'mew11.ogg',
-            'mew12.ogg',
-            'mew13.ogg',
-            'mew14.ogg',
-            'mew15.ogg',
-            'mew16.ogg',
-            'mew17.ogg',
-            'mew18.ogg',
-            'mew19.ogg',
-            'mew20.ogg',
-            'mew21.ogg',
-            'mew22.ogg',
-            'mew23.ogg',
-            'mew24.ogg',
-            'mew25.ogg',
-            'mew26.ogg',
-            'mew27.ogg',
-            'mew28.ogg',
-            'mew29.ogg',
-            'mew30.ogg',
-            'mew31.ogg',
-            'mew32.ogg',
-            'mew33.ogg',
-            'mew34.ogg',
-            'mew35.ogg',
-            'mew36.ogg',
-            'mew37.ogg',
-            'mew38.ogg',
-            'mew39.ogg',
-            'mew40.ogg',
-            'mew41.ogg',
-            'mew42.ogg',
-            'mew43.ogg',
-            'mew44.ogg',
-            'mew45.ogg',
-            'mew46.ogg',
-            'mew47.ogg',
-            'mew48.ogg',
-            'mew49.ogg'
-            ]
-
-shh = [
-            'mew49.ogg',
-            'mew14.ogg',
-            'mew48.ogg',
-            'mew15.ogg',
-            'mew47.ogg',
-            'mew13.ogg',
-            'mew40.ogg',
-            'mew41.ogg',
-            'mew42.ogg',
-            'mew43.ogg',
-            'mew16.ogg'
             ]
