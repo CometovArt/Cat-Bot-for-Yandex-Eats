@@ -9,9 +9,11 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 # Импорт файла с репликами кота
 import cat
 from admin import admin_done
-from config import bot, SBOR_CHAT, DEV_CHAT, TOKEN, LOGFILE, DELETE, ADD, DONE
+from config import bot, SBOR_CHAT, DEV_CHAT, TOKEN, LOGFILE, ORDER_DELETE, ORDER_ADD, ORDER_DONE
+#, SETTING_NAME, SETTING_NAME_DONE
 from mew import talk, woof
-from errors import error_answer, error_order, error_done, error_add, error_handler
+from errors import error_answer, error_order, error_done, error_add
+#, error_handler
 from orders import order_user, delete_answer, add_pos, add_answer, delete_back, add_min, done, done_photo, order_cancel
 from command import start, stat, callback_reload, id, test, test_voice
 
@@ -40,11 +42,12 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler('test_voice', test_voice))
     dispatcher.add_handler(CommandHandler('test', test))
 
+
     # Слушает чат сборки и собирает номера заказов
-    conv_handler = ConversationHandler(
+    order_handler = ConversationHandler(
         entry_points=[MessageHandler(Filters.regex('\d{6}-\d{6}') & ~Filters.chat(SBOR_CHAT), order_user)],
         states={
-            DELETE: [
+            ORDER_DELETE: [
                 MessageHandler(Filters.regex('^\d{,2}$') & ~Filters.regex('\d{6}-\d{6}') & ~Filters.regex('^[+]\d{,2}$'), delete_answer),
                 MessageHandler(Filters.text & ~Filters.regex('(Отмена|отмена|Отменяется|отменяется|Отменен|отменен|Отменён|отменён|Отменится|отменится)') & ~Filters.regex('^\d{,2}$') & ~Filters.regex('\d{6}-\d{6}') & ~Filters.regex('^[+]\d{,2}$'), error_answer),
                 MessageHandler(Filters.regex('\d{6}-\d{6}'), error_order),
@@ -54,12 +57,12 @@ def main() -> None:
                 CallbackQueryHandler(order_cancel, pattern='^' + str('order_cancel') + '$'),
                 MessageHandler(Filters.photo, done_photo),
             ],
-            ADD: [
+            ORDER_ADD: [
                 MessageHandler(Filters.regex('^\d{,2}$') & ~Filters.regex('\d{6}-\d{6}') & ~Filters.regex('^[+]\d{,2}$'), add_answer),
                 MessageHandler(~Filters.regex('^\d{,2}$'), error_add),
                 CallbackQueryHandler(delete_back, pattern='^' + str('delete_back') + '$'),
             ],
-            DONE: [
+            ORDER_DONE: [
                 MessageHandler(Filters.photo, done),
                 MessageHandler(Filters.regex('\d{6}-\d{6}'), error_done),
                 CallbackQueryHandler(delete_back, pattern='^' + str('delete_back') + '$'),
@@ -72,9 +75,9 @@ def main() -> None:
 
 
     dispatcher.add_handler(CallbackQueryHandler(admin_done, pattern='^' + str('\d{6}') + '$'))
-    dispatcher.add_error_handler(error_handler)
+#    dispatcher.add_error_handler(error_handler)
 
-    dispatcher.add_handler(conv_handler)
+    dispatcher.add_handler(order_handler)
 
     updater.start_polling()
     updater.idle()

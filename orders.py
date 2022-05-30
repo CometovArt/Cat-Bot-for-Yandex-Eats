@@ -3,9 +3,10 @@ from telegram.ext import CallbackContext, ConversationHandler
 
 import random
 import re
+from datetime import datetime
 
 import cat
-from config import bot, worksheet, CHECK_CHAT, DELETE, ADD, DONE
+from config import bot, worksheet, CHECK_CHAT, ORDER_DELETE, ORDER_ADD, ORDER_DONE
 from admin import admin_reload
 from keyboards import keyboard_delete, keyboard_change
 
@@ -14,7 +15,8 @@ def order_user(update: Update, context: CallbackContext) -> None:
     # Собираем данные о заказе
     msg = update.message.text
     user = update.message.from_user.username
-    time = update.message.date.strftime("%H:%M")
+    day = datetime.now().strftime("%d.%m")
+    time = datetime.now().strftime("%H:%M")
     strings = re.findall(r'\n', msg)
     order = re.search(r'\d{6}-\d{6}', msg)
     time_end = re.search(r'\d\d:\d\d', msg)
@@ -29,15 +31,16 @@ def order_user(update: Update, context: CallbackContext) -> None:
     )
     # Отправляем данные в чат и таблицу
     update.message.reply_text(text, parse_mode='markdown', reply_markup=InlineKeyboardMarkup(keyboard_delete))
-    val = worksheet.cell(3, 15).value # номер свободной ячейки
+    val = worksheet.cell(1, 1).value # номер свободной ячейки
+    worksheet.update_cell(val, 1, day) # день сборки
     worksheet.update_cell(val, 2, order.group(0)) # номер закака
     worksheet.update_cell(val, 3, user) # ник сборщика
     worksheet.update_cell(val, 4, time) # время начала сборки
-    worksheet.update_cell(val, 6, len(strings)-13) # количество позиций
-    worksheet.update_cell(val, 13, time_end.group(0)) # время доставки
+    worksheet.update_cell(val, 5, len(strings)-13) # количество позиций
+    worksheet.update_cell(val, 9, time_end.group(0)) # время доставки
     admin_reload(update, context)
 
-    return DELETE
+    return ORDER_DELETE
 
 
 # Ответ на сообщение об удалении
@@ -60,9 +63,9 @@ def delete_answer(update: Update, context: CallbackContext) -> None:
     msg.reply_text(text, parse_mode='markdown', reply_markup=InlineKeyboardMarkup(keyboard_change))
     # Записываем удаления в таблицу
     scan = worksheet.findall(user)[-1] # ищем последний заказ
-    worksheet.update_cell(scan.row, 7, delete)
+    worksheet.update_cell(scan.row, 6, delete)
 
-    return DONE
+    return ORDER_DONE
 
 
 # Ответ на кнопку добавления
@@ -74,7 +77,7 @@ def add_pos(update: Update, context: CallbackContext) -> None:
     )
     update.effective_message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_change))
 
-    return ADD
+    return ORDER_ADD
 
 
 # Ответ на успешню запись
@@ -89,9 +92,9 @@ def add_answer(update: Update, context: CallbackContext) -> None:
     numb = f'-{add}'
     user = update.message.from_user.username
     scan = worksheet.findall(user)[-1] # ищем последний заказ
-    worksheet.update_cell(scan.row, 7, numb)
+    worksheet.update_cell(scan.row, 6, numb)
 
-    return DONE
+    return ORDER_DONE
 
 
 # Возвращаемся к удалениям
@@ -102,7 +105,7 @@ def delete_back(update: Update, context: CallbackContext) -> None:
     )
     update.effective_message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_delete))
 
-    return DELETE
+    return ORDER_DELETE
 
 
 # Добавляем минуты
@@ -115,23 +118,23 @@ def add_min(update: Update, context: CallbackContext) -> None:
     # Записываем удаления в таблицу
     user = update.effective_user.username
     scan = worksheet.findall(user)[-1] # ищем последний заказ
-    worksheet.update_cell(scan.row, 14, min.group(0))
+    worksheet.update_cell(scan.row, 7, min.group(0))
 
-    return DELETE
+    return ORDER_DELETE
 
 
 # Закрываем заказ
 def done(update: Update, context: CallbackContext) -> None:
     user = update.effective_user.username
-    time = update.effective_message.date.strftime("%H:%M")
+    time = datetime.now().strftime("%H:%M")
     scan = worksheet.findall(user)[-1]
     worksheet.update_cell(scan.row, 8, time)
-    val = worksheet.get('A{}:S{}'.format(scan.row, scan.row))
+    val = worksheet.get('A{}:AC{}'.format(scan.row, scan.row))
     text = (
         f'*Заказ {val[0][1]} успешно закрыт!* Твоя статистика за заказ:\n'
-        f'🛒 Корзина: *{val[0][10]}*, ⏳ Время на позицию: *{val[0][11]}*\n\n'
+        f'🛒 Корзина: *{val[0][15]}*, ⏳ Время на позицию: *{val[0][16]}*\n\n'
         f'Твоя статистика за день:\n'
-        f'🛒 Корзина: *{val[0][16]}*, ⏳ Время на позицию: *{val[0][17]}*, 💵 Ставка: *{val[0][18]}*р\n\n'
+        f'🛒 Корзина: *{val[0][19]}*, ⏳ Время на позицию: *{val[0][20]}*, 💵 Ставка: *{val[0][21]}*\n\n'
         f'Пересылай следующий заказ, как только придёт :)'
     )
     text_order = (
@@ -148,17 +151,17 @@ def done(update: Update, context: CallbackContext) -> None:
 # Закрываем заказ после фото чека
 def done_photo(update: Update, context: CallbackContext) -> None:
     user = update.effective_user.username
-    time = update.effective_message.date.strftime("%H:%M")
+    time = datetime.now().strftime("%H:%M")
     scan = worksheet.findall(user)[-1]
-    worksheet.update_cell(scan.row, 7, "0")
+    worksheet.update_cell(scan.row, 6, "0")
     worksheet.update_cell(scan.row, 8, time)
-    val = worksheet.get('A{}:S{}'.format(scan.row, scan.row))
+    val = worksheet.get('A{}:AC{}'.format(scan.row, scan.row))
     text = (
         f'*Заказ {val[0][1]} успешно закрыт!* Твоя статистика за заказ:\n'
-        f'🛒 Корзина: *{val[0][10]}*, ⏳ Время на позицию: *{val[0][11]}*\n\n'
+        f'🛒 Корзина: *{val[0][15]}*, ⏳ Время на позицию: *{val[0][16]}*\n\n'
         f'Твоя статистика за день:\n'
-        f'🛒 Корзина: *{val[0][16]}*, ⏳ Время на позицию: *{val[0][17]}*, 💵 Ставка: *{val[0][18]}*р\n\n'
-        f'Держи заслуженного котейку за заказ без удалений 😻'
+        f'🛒 Корзина: *{val[0][19]}*, ⏳ Время на позицию: *{val[0][20]}*,\n 💵 Ставка: *{val[0][21]}*\n\n'
+        f'Пересылай следующий заказ, как только придёт :)'
     )
     text_order = (
         f'Чек по заказу {val[0][1]}:'
