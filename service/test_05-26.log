@@ -1,0 +1,771 @@
+2022-05-26 18:55:02,479 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 18:55:02,962 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 18:55:02,962 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 18:55:02,962 - telegram.ext._application - INFO - Application started
+2022-05-26 18:55:03,395 - apscheduler.scheduler - INFO - Removed job c00bfa1a30af4964af513e6848090b69
+2022-05-26 18:55:03,395 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 15:55:03 UTC], next run at: 2022-05-26 15:55:03 UTC)" (scheduled at 2022-05-26 15:55:03.377487+00:00)
+2022-05-26 18:55:03,935 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 15:55:03 UTC], next run at: 2022-05-26 15:55:03 UTC)" executed successfully
+2022-05-26 19:01:18,824 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 19:01:19,276 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 19:01:19,276 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 19:01:19,276 - telegram.ext._application - INFO - Application started
+2022-05-26 19:01:19,765 - apscheduler.scheduler - INFO - Removed job fedb5f72ea9d44aea0177080eb18957a
+2022-05-26 19:01:19,765 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 16:01:19 UTC], next run at: 2022-05-26 16:01:19 UTC)" (scheduled at 2022-05-26 16:01:19.756433+00:00)
+2022-05-26 19:01:20,269 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 16:01:19 UTC], next run at: 2022-05-26 16:01:19 UTC)" executed successfully
+2022-05-26 19:33:32,999 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 19:33:33,394 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 19:33:33,394 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 19:33:33,394 - telegram.ext._application - INFO - Application started
+2022-05-26 19:33:33,961 - apscheduler.scheduler - INFO - Removed job 1ce715c5f2bc459684cbb946c9a050e7
+2022-05-26 19:33:33,961 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 16:33:33 UTC], next run at: 2022-05-26 16:33:33 UTC)" (scheduled at 2022-05-26 16:33:33.940634+00:00)
+2022-05-26 19:33:34,411 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 16:33:33 UTC], next run at: 2022-05-26 16:33:33 UTC)" executed successfully
+2022-05-26 19:52:27,486 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 19:52:27,853 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 19:52:27,853 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 19:52:27,853 - telegram.ext._application - INFO - Application started
+2022-05-26 19:52:28,432 - apscheduler.scheduler - INFO - Removed job c3c870e8331544e08281136a1607f318
+2022-05-26 19:52:28,432 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 16:52:28 UTC], next run at: 2022-05-26 16:52:28 UTC)" (scheduled at 2022-05-26 16:52:28.426927+00:00)
+2022-05-26 19:52:28,984 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 16:52:28 UTC], next run at: 2022-05-26 16:52:28 UTC)" executed successfully
+2022-05-26 20:18:16,862 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:18:17,299 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:18:17,299 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:18:17,299 - telegram.ext._application - INFO - Application started
+2022-05-26 20:18:17,819 - apscheduler.scheduler - INFO - Removed job 38b9b3e378df4af29a604985c6e4d3c0
+2022-05-26 20:18:17,819 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:18:17 UTC], next run at: 2022-05-26 17:18:17 UTC)" (scheduled at 2022-05-26 17:18:17.803048+00:00)
+2022-05-26 20:18:19,458 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:18:17 UTC], next run at: 2022-05-26 17:18:17 UTC)" executed successfully
+2022-05-26 20:19:27,632 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:19:28,035 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:19:28,035 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:19:28,035 - telegram.ext._application - INFO - Application started
+2022-05-26 20:19:28,578 - apscheduler.scheduler - INFO - Removed job c3ec685f57ec4461a90c0c40bd325a1f
+2022-05-26 20:19:28,578 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:19:28 UTC], next run at: 2022-05-26 17:19:28 UTC)" (scheduled at 2022-05-26 17:19:28.574374+00:00)
+2022-05-26 20:19:29,049 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:19:28 UTC], next run at: 2022-05-26 17:19:28 UTC)" executed successfully
+2022-05-26 20:48:44,149 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:48:44,546 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:48:44,546 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:48:44,546 - telegram.ext._application - INFO - Application started
+2022-05-26 20:48:45,108 - apscheduler.scheduler - INFO - Removed job 1993d44202ac4416a95517a7982cccec
+2022-05-26 20:48:45,108 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:48:45 UTC], next run at: 2022-05-26 17:48:45 UTC)" (scheduled at 2022-05-26 17:48:45.089411+00:00)
+2022-05-26 20:48:45,934 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:48:45 UTC], next run at: 2022-05-26 17:48:45 UTC)" executed successfully
+2022-05-26 20:48:52,413 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1101)
+AttributeError: 'Bot' object has no attribute 'edit_reply_markup'
+2022-05-26 20:49:25,825 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:49:26,243 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:49:26,243 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:49:26,244 - telegram.ext._application - INFO - Application started
+2022-05-26 20:49:26,770 - apscheduler.scheduler - INFO - Removed job e9041377268446239ae8dd4fc8d0f38f
+2022-05-26 20:49:26,770 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:49:26 UTC], next run at: 2022-05-26 17:49:26 UTC)" (scheduled at 2022-05-26 17:49:26.766342+00:00)
+2022-05-26 20:49:27,508 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:49:26 UTC], next run at: 2022-05-26 17:49:26 UTC)" executed successfully
+2022-05-26 20:49:30,826 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1101)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+2022-05-26 20:49:31,004 - telegram.ext._application - ERROR - An error was raised and an uncaught error was raised while handling the error with an error_handler.
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1101)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 1445, in process_error
+    await callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\error.py", line 82, in error_handler
+    await context.bot.send_message(chat_id=DEV_CHAT, text=message, parse_mode=ParseMode.HTML)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 637, in send_message
+    return await self._send_message(  # type: ignore[return-value]
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_extbot.py", line 253, in _send_message
+    result = await super()._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 319, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is too long
+2022-05-26 20:50:47,713 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1101)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+2022-05-26 20:50:48,019 - telegram.ext._application - ERROR - An error was raised and an uncaught error was raised while handling the error with an error_handler.
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1101)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 1445, in process_error
+    await callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\error.py", line 82, in error_handler
+    await context.bot.send_message(chat_id=DEV_CHAT, text=message, parse_mode=ParseMode.HTML)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 637, in send_message
+    return await self._send_message(  # type: ignore[return-value]
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_extbot.py", line 253, in _send_message
+    result = await super()._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 319, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is too long
+2022-05-26 20:51:32,896 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:51:33,265 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:51:33,265 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:51:33,265 - telegram.ext._application - INFO - Application started
+2022-05-26 20:51:33,854 - apscheduler.scheduler - INFO - Removed job b34c641be9814f4993bf457b42e0ef3a
+2022-05-26 20:51:33,854 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:51:33 UTC], next run at: 2022-05-26 17:51:33 UTC)" (scheduled at 2022-05-26 17:51:33.838063+00:00)
+2022-05-26 20:51:34,522 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:51:33 UTC], next run at: 2022-05-26 17:51:33 UTC)" executed successfully
+2022-05-26 20:51:36,435 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1102)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+2022-05-26 20:51:36,634 - telegram.ext._application - ERROR - An error was raised and an uncaught error was raised while handling the error with an error_handler.
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1102)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 1445, in process_error
+    await callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\error.py", line 82, in error_handler
+    await context.bot.send_message(chat_id=DEV_CHAT, text=message, parse_mode=ParseMode.HTML)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 637, in send_message
+    return await self._send_message(  # type: ignore[return-value]
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_extbot.py", line 253, in _send_message
+    result = await super()._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 319, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is too long
+2022-05-26 20:54:51,158 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:54:51,608 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:54:51,608 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:54:51,608 - telegram.ext._application - INFO - Application started
+2022-05-26 20:54:52,099 - apscheduler.scheduler - INFO - Removed job 46aeee34637346e4ba64e1999b58bb52
+2022-05-26 20:54:52,099 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:54:52 UTC], next run at: 2022-05-26 17:54:52 UTC)" (scheduled at 2022-05-26 17:54:52.099296+00:00)
+2022-05-26 20:54:52,504 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:54:52 UTC], next run at: 2022-05-26 17:54:52 UTC)" executed successfully
+2022-05-26 20:55:01,292 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1102)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+2022-05-26 20:56:21,816 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:56:22,237 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:56:22,237 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:56:22,237 - telegram.ext._application - INFO - Application started
+2022-05-26 20:56:22,774 - apscheduler.scheduler - INFO - Removed job acb6803e396942bdbc696cd79c0aa70c
+2022-05-26 20:56:22,774 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:56:22 UTC], next run at: 2022-05-26 17:56:22 UTC)" (scheduled at 2022-05-26 17:56:22.751879+00:00)
+2022-05-26 20:56:23,127 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:56:22 UTC], next run at: 2022-05-26 17:56:22 UTC)" executed successfully
+2022-05-26 20:56:25,322 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 64, in test
+    await bot.edit_message_text(random_message(), chat_id=DEV_CHAT, message_id=1102, reply_markup=keyboard_0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3338, in edit_message_text
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+2022-05-26 20:57:27,125 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:57:27,649 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:57:27,649 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:57:27,649 - telegram.ext._application - INFO - Application started
+2022-05-26 20:57:28,078 - apscheduler.scheduler - INFO - Removed job 38cdd589eeea4ddda0536cb22982bd6c
+2022-05-26 20:57:28,078 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:57:28 UTC], next run at: 2022-05-26 17:57:28 UTC)" (scheduled at 2022-05-26 17:57:28.066455+00:00)
+2022-05-26 20:57:28,615 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:57:28 UTC], next run at: 2022-05-26 17:57:28 UTC)" executed successfully
+2022-05-26 20:57:29,726 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 64, in test
+    await bot.edit_message_text(random_message(), chat_id=DEV_CHAT, message_id=1102, reply_markup=keyboard_0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3338, in edit_message_text
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+2022-05-26 20:59:32,488 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 20:59:32,966 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 20:59:32,966 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 20:59:32,966 - telegram.ext._application - INFO - Application started
+2022-05-26 20:59:33,434 - apscheduler.scheduler - INFO - Removed job 584ab2785d3b4199ad3f06181d342fe8
+2022-05-26 20:59:33,434 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 17:59:33 UTC], next run at: 2022-05-26 17:59:33 UTC)" (scheduled at 2022-05-26 17:59:33.429124+00:00)
+2022-05-26 20:59:33,822 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 17:59:33 UTC], next run at: 2022-05-26 17:59:33 UTC)" executed successfully
+2022-05-26 20:59:36,045 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 269, in _request_wrapper
+    code, payload = await self.do_request(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_httpxrequest.py", line 171, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 72, in json_parameters
+    return {
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestdata.py", line 75, in <dictcomp>
+    if param.json_value is not None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_requestparameter.py", line 78, in json_value
+    return json.dumps(self.value)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InlineKeyboardButton is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\command.py", line 65, in test
+    await bot.edit_message_reply_markup(reply_markup=keyboard_0, chat_id=DEV_CHAT, message_id=1102)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 238, in decorator
+    result = await func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 3586, in edit_message_reply_markup
+    return await self._send_message(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 346, in _send_message
+    result = await self._post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\_bot.py", line 310, in _post
+    return await request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 160, in post
+    result = await self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\request\_baserequest.py", line 281, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type InlineKeyboardButton is not JSON serializable')
+2022-05-26 21:07:17,413 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:07:17,916 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:07:17,916 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:07:17,916 - telegram.ext._application - INFO - Application started
+2022-05-26 21:07:18,372 - apscheduler.scheduler - INFO - Removed job 5392aa7e736c46ab9c2e6b4a812f9dde
+2022-05-26 21:07:18,372 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:07:18 UTC], next run at: 2022-05-26 18:07:18 UTC)" (scheduled at 2022-05-26 18:07:18.356225+00:00)
+2022-05-26 21:07:18,898 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:07:18 UTC], next run at: 2022-05-26 18:07:18 UTC)" executed successfully
+2022-05-26 21:27:12,887 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:27:13,350 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:27:13,350 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:27:13,350 - telegram.ext._application - INFO - Application started
+2022-05-26 21:27:13,845 - apscheduler.scheduler - INFO - Removed job e813884b7a9547e7aada423fc328e8f6
+2022-05-26 21:27:13,845 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:27:13 UTC], next run at: 2022-05-26 18:27:13 UTC)" (scheduled at 2022-05-26 18:27:13.829944+00:00)
+2022-05-26 21:27:14,248 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:27:13 UTC], next run at: 2022-05-26 18:27:13 UTC)" executed successfully
+2022-05-26 21:27:32,119 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_conversationhandler.py", line 806, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\orders.py", line 82, in add_pos
+    await query.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_change))
+AttributeError: 'CallbackQuery' object has no attribute 'reply_text'
+2022-05-26 21:28:13,729 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:28:14,180 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:28:14,180 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:28:14,181 - telegram.ext._application - INFO - Application started
+2022-05-26 21:28:14,658 - apscheduler.scheduler - INFO - Removed job e988f275b3654788930b66e9c19daeac
+2022-05-26 21:28:14,659 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:28:14 UTC], next run at: 2022-05-26 18:28:14 UTC)" (scheduled at 2022-05-26 18:28:14.656349+00:00)
+2022-05-26 21:28:15,355 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:28:14 UTC], next run at: 2022-05-26 18:28:14 UTC)" executed successfully
+2022-05-26 21:29:06,993 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_conversationhandler.py", line 806, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\orders.py", line 82, in add_pos
+    await query.reply_message_text(text, reply_markup=InlineKeyboardMarkup(keyboard_change))
+AttributeError: 'CallbackQuery' object has no attribute 'reply_message_text'
+2022-05-26 21:29:39,141 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:29:39,589 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:29:39,589 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:29:39,589 - telegram.ext._application - INFO - Application started
+2022-05-26 21:29:40,075 - apscheduler.scheduler - INFO - Removed job c46626a20ed44b758a381f49b51d9d59
+2022-05-26 21:29:40,075 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:29:40 UTC], next run at: 2022-05-26 18:29:40 UTC)" (scheduled at 2022-05-26 18:29:40.075910+00:00)
+2022-05-26 21:29:40,551 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:29:40 UTC], next run at: 2022-05-26 18:29:40 UTC)" executed successfully
+2022-05-26 21:40:26,453 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:40:26,866 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:40:26,866 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:40:26,866 - telegram.ext._application - INFO - Application started
+2022-05-26 21:40:27,407 - apscheduler.scheduler - INFO - Removed job 7abc0ebd3b91423e8722587150e4a0bb
+2022-05-26 21:40:27,407 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:40:27 UTC], next run at: 2022-05-26 18:40:27 UTC)" (scheduled at 2022-05-26 18:40:27.393786+00:00)
+2022-05-26 21:40:27,815 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:40:27 UTC], next run at: 2022-05-26 18:40:27 UTC)" executed successfully
+2022-05-26 21:40:52,959 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_conversationhandler.py", line 806, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\orders.py", line 71, in delete_answer
+    scan = worksheet.findall(user)[-1] # ищем последний заказ
+IndexError: list index out of range
+2022-05-26 21:42:45,871 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:42:46,292 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:42:46,292 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:42:46,292 - telegram.ext._application - INFO - Application started
+2022-05-26 21:42:46,809 - apscheduler.scheduler - INFO - Removed job 3b51b7f98a9a4608af2c6d64351da520
+2022-05-26 21:42:46,809 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:42:46 UTC], next run at: 2022-05-26 18:42:46 UTC)" (scheduled at 2022-05-26 18:42:46.808198+00:00)
+2022-05-26 21:42:47,232 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:42:46 UTC], next run at: 2022-05-26 18:42:46 UTC)" executed successfully
+2022-05-26 21:44:58,764 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:44:59,194 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:44:59,194 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:44:59,194 - telegram.ext._application - INFO - Application started
+2022-05-26 21:44:59,723 - apscheduler.scheduler - INFO - Removed job 37a81ba9f9644671acc8b90992c555f8
+2022-05-26 21:44:59,724 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:44:59 UTC], next run at: 2022-05-26 18:44:59 UTC)" (scheduled at 2022-05-26 18:44:59.704564+00:00)
+2022-05-26 21:45:00,193 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:44:59 UTC], next run at: 2022-05-26 18:44:59 UTC)" executed successfully
+2022-05-26 21:57:32,068 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_conversationhandler.py", line 806, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\orders.py", line 70, in delete_answer
+    scan = worksheet.findall(user)[-1] # ищем последний заказ
+IndexError: list index out of range
+2022-05-26 21:58:40,778 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 21:58:41,146 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 21:58:41,146 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 21:58:41,146 - telegram.ext._application - INFO - Application started
+2022-05-26 21:58:41,733 - apscheduler.scheduler - INFO - Removed job 17726a89293a44ee9040c43f85134f39
+2022-05-26 21:58:41,733 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 18:58:41 UTC], next run at: 2022-05-26 18:58:41 UTC)" (scheduled at 2022-05-26 18:58:41.718169+00:00)
+2022-05-26 21:58:42,281 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 18:58:41 UTC], next run at: 2022-05-26 18:58:41 UTC)" executed successfully
+2022-05-26 21:58:56,003 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_conversationhandler.py", line 806, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\orders.py", line 63, in delete_answer
+    user = query.message.username
+AttributeError: 'Message' object has no attribute 'username'
+2022-05-26 22:00:07,958 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 22:00:08,368 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 22:00:08,368 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 22:00:08,368 - telegram.ext._application - INFO - Application started
+2022-05-26 22:00:08,902 - apscheduler.scheduler - INFO - Removed job cbf2fbc152164a279bdef92a206cf9ac
+2022-05-26 22:00:08,902 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 19:00:08 UTC], next run at: 2022-05-26 19:00:08 UTC)" (scheduled at 2022-05-26 19:00:08.900362+00:00)
+2022-05-26 22:00:10,102 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 19:00:08 UTC], next run at: 2022-05-26 19:00:08 UTC)" executed successfully
+2022-05-26 22:00:26,950 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_conversationhandler.py", line 806, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\orders.py", line 63, in delete_answer
+    user = query.message.username
+AttributeError: 'Message' object has no attribute 'username'
+2022-05-26 22:00:58,079 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 22:00:58,449 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 22:00:58,449 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 22:00:58,450 - telegram.ext._application - INFO - Application started
+2022-05-26 22:00:59,021 - apscheduler.scheduler - INFO - Removed job 9ee5c9ef805a42e083ea57cb73450727
+2022-05-26 22:00:59,021 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 19:00:59 UTC], next run at: 2022-05-26 19:00:59 UTC)" (scheduled at 2022-05-26 19:00:59.018949+00:00)
+2022-05-26 22:01:01,022 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 19:00:59 UTC], next run at: 2022-05-26 19:00:59 UTC)" executed successfully
+2022-05-26 22:01:01,737 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_application.py", line 945, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_conversationhandler.py", line 806, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\_handler.py", line 135, in handle_update
+    return await self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot_async\orders.py", line 65, in delete_answer
+    f'{query.message}*я записал твои удалени€!* \U0001f58d\n\n“еперь жду фото чека ;)\n'
+AttributeError: 'NoneType' object has no attribute 'message'
+2022-05-26 22:04:21,100 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 22:04:21,550 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 22:04:21,550 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 22:04:21,550 - telegram.ext._application - INFO - Application started
+2022-05-26 22:04:22,052 - apscheduler.scheduler - INFO - Removed job 93906e64656e4b6dafa12ea46dbcae8d
+2022-05-26 22:04:22,052 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 19:04:22 UTC], next run at: 2022-05-26 19:04:22 UTC)" (scheduled at 2022-05-26 19:04:22.033222+00:00)
+2022-05-26 22:04:22,779 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 19:04:22 UTC], next run at: 2022-05-26 19:04:22 UTC)" executed successfully
+2022-05-26 22:47:53,462 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 22:48:26,437 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-05-26 22:48:26,787 - apscheduler.scheduler - INFO - Added job "startmessage" to job store "default"
+2022-05-26 22:48:26,787 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-26 22:48:26,788 - telegram.ext._application - INFO - Application started
+2022-05-26 22:48:27,282 - apscheduler.scheduler - INFO - Removed job 4fc65dfc087f4cfb89832bc218a4555a
+2022-05-26 22:48:27,283 - apscheduler.executors.default - INFO - Running job "startmessage (trigger: date[2022-05-26 19:48:27 UTC], next run at: 2022-05-26 19:48:27 UTC)" (scheduled at 2022-05-26 19:48:27.280816+00:00)
+2022-05-26 22:48:27,781 - apscheduler.executors.default - INFO - Job "startmessage (trigger: date[2022-05-26 19:48:27 UTC], next run at: 2022-05-26 19:48:27 UTC)" executed successfully

@@ -1,0 +1,140 @@
+2022-05-09 17:28:11,059 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 17:28:45,291 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:12:07,879 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:16:01,503 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:16:08,168 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 74, in admin_reload
+    f'Собранные:{text_plus}'
+UnboundLocalError: local variable 'text_plus' referenced before assignment
+2022-05-09 19:17:07,164 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:17:27,172 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 95, in admin_done
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 31, in admin_reload
+    InlineKeyboardButton(f'{order_button[0]}', callback_data=str(f'{val[1][0]}')),
+IndexError: list index out of range
+2022-05-09 19:21:04,987 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:21:20,045 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 39, in admin_reload
+    InlineKeyboardButton(f'{order_button[4]}', callback_data=str(f'{val[5][0]}')),
+IndexError: list index out of range
+2022-05-09 19:28:39,226 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:28:45,423 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 91, in admin_reload
+    bot.send_message(ADMIN_CHAT, text, reply_markup=reply_markup)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\bot.py", line 522, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\bot.py", line 336, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse inline keyboard button: text buttons are unallowed in the inline keyboard
+2022-05-09 19:29:25,582 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 70, in admin_reload
+    InlineKeyboardButton(f'{order_button[16]}', callback_data=str(f'{order_callback[16]}')),
+IndexError: list index out of range
+2022-05-09 19:31:20,978 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 70, in admin_reload
+    InlineKeyboardButton(f'{order_button[16]}', callback_data=str(f'{order_callback[16]}')),
+IndexError: list index out of range
+2022-05-09 19:32:16,810 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:32:59,326 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 102, in admin_done
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 38, in admin_reload
+    InlineKeyboardButton(f'{order_button[0]}', callback_data=str(f'{order_callback[0]}')),
+IndexError: list index out of range
+2022-05-09 19:38:32,214 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:38:38,797 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 42, in admin_reload
+    InlineKeyboardButton(f'{order_button[0]}', callback_data=str(f'{order_callback[0]}')),
+IndexError: list index out of range
+2022-05-09 19:39:58,686 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:40:01,978 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 43, in admin_reload
+    InlineKeyboardButton(f'{order_button[1]}', callback_data=str(f'{order_callback[1]}')),
+IndexError: list index out of range
+2022-05-09 19:41:36,839 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:41:41,769 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 36, in callback_reload
+    admin_reload(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\admin.py", line 42, in admin_reload
+    InlineKeyboardButton(f'{order_button[1]}', callback_data=str(f'{order_callback[1]}')),
+IndexError: list index out of range
+2022-05-09 19:42:28,870 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:53:27,681 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:56:24,600 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 19:56:55,449 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 20:00:47,278 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 20:01:05,936 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-09 20:02:26,974 - apscheduler.scheduler - INFO - Scheduler started

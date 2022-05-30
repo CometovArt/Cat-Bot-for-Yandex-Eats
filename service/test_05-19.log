@@ -1,0 +1,27 @@
+2022-05-19 15:08:03,512 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-19 15:08:08,539 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2022-05-19 15:08:08,540 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2022-05-19 15:31:27,437 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-19 15:34:07,639 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-19 15:37:47,892 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-19 15:37:51,396 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 66, in test
+    cur.execute('''CREATE TABLE STUDENT
+psycopg2.errors.DuplicateTable: relation "student" already exists
+
+2022-05-19 15:54:28,619 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-19 15:59:22,938 - apscheduler.scheduler - INFO - Scheduler started
+2022-05-19 15:59:26,370 - error - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\user\CometovArt\Dev\catbot\command.py", line 57, in test
+    timetest()
+TypeError: 'str' object is not callable
