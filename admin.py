@@ -7,35 +7,45 @@ from config import bot, worksheet, ADMIN_CHAT
 
 
 # Список заказов в админку
-def admin_reload(update: Update, context: CallbackContext) -> None:
-    val = worksheet.get("V1:AA20")
+async def admin_reload(update: Update, context: CallbackContext) -> None:
+    val = worksheet.get("AE1:AN20")
 
-    order_list = []
+    order_list = [] # собираются
 
-    if int(val[0][4]) != 0:
-        for i in range(1, int(val[0][4]) + 1):
-            order_list.append(f'{val[i][3]} — {val[i][4]} [{val[i][5]}]\n')
+    if int(val[0][1]) != 0:
+        for i in range(1, int(val[0][1]) + 1):
+            order_list.append(f'{val[i][0]} — {val[i][1]} [{val[i][2]}]\n')
     else:
         order_list.append(f'Нет заказов 😱 \n')
 
-    order_callback = []
+    order_callback = [] # собраны
 
-    if int(val[0][1]) != 0:
-        for i in range(1, int(val[0][1]) + 1):
-            order_callback.append(f'{val[i][0]}')
+    if int(val[0][5]) != 0:
+        for i in range(1, int(val[0][5]) + 1):
+            order_callback.append(f'{val[i][4]}')
 
-    order_button = []
+    order_button = [] 
 
-    if int(val[0][1]) != 0:
-        for i in range(1, int(val[0][1]) + 1):
-            order_button.append(f'{val[i][0]} — {val[i][2]}')
-        for n in range(1, (18 - int(val[0][1])) + 1):
+    if int(val[0][5]) != 0:
+        for i in range(1, int(val[0][5]) + 1):
+            order_button.append(f'{val[i][4]} — {val[i][5]}')
+        for n in range(1, (18 - int(val[0][5])) + 1):
             order_button.append('')
             order_callback.append('404')
     else:
         for n in range(1, 18 + 1):
             order_button.append('')
             order_callback.append('404')
+
+    order_time = [] # просрочены
+
+    if int(val[0][8]) != 0:
+        order_time.append(f'Просроченные заказы:\n')
+        for i in range(1, int(val[0][8]) + 1):
+            order_time.append(f'{val[i][7]} — {val[i][8]} [{val[i][9]}]\n')
+        order_time.append(f'\n')
+    else:
+        order_time.append('')
 
     keyboard = [
                 [
@@ -76,7 +86,7 @@ def admin_reload(update: Update, context: CallbackContext) -> None:
                 ],
     ]
 
-    if val[0][1] == "0":
+    if val[0][5] == "0":
         text_plus = "\nВсе заказы выданы 💪"
     else:
         text_plus = ""
@@ -84,23 +94,24 @@ def admin_reload(update: Update, context: CallbackContext) -> None:
     text = (
         f'Собираются:\n'
         f'{"".join(order_list)}\n'
+        f'{"".join(order_time)}'
         f'Собранные:{text_plus}'
     )
 
-    if val[0][1] == "0":
-        bot.send_message(ADMIN_CHAT, text)
+    if val[0][5] == "0":
+        await bot.send_message(ADMIN_CHAT, text)
 
     else:
         reply_markup = InlineKeyboardMarkup(keyboard)
-        bot.send_message(ADMIN_CHAT, text, reply_markup=reply_markup)
+        await bot.send_message(ADMIN_CHAT, text, reply_markup=reply_markup)
 
 
 # Отмечаем выданный заказ
-def admin_done(update: Update, context: CallbackContext) -> None:
-    update.callback_query.answer()
+async def admin_done(update: Update, context: CallbackContext) -> None:
+    await update.callback_query.answer()
 
     torder = re.compile(r'\d{6}[-]%s' % (update.callback_query.data))
     scan = worksheet.findall(torder)[-1] # ищем заказ
     worksheet.update_cell(scan.row, 10, "Выдан")
 
-    admin_reload(update, context)
+    await admin_reload(update, context)

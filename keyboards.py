@@ -28,3 +28,9 @@ keyboard_delete = [
             InlineKeyboardButton("Отмена заказа", callback_data=str('order_cancel')),
         ],
 ]
+
+keyboard_name = [
+        [
+            InlineKeyboardButton("Изменить имя", callback_data=str('setting_edit_name')),
+        ],
+]
