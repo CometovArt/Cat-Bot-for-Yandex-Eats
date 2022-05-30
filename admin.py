@@ -8,28 +8,28 @@ from config import bot, worksheet, ADMIN_CHAT
 
 # Список заказов в админку
 def admin_reload(update: Update, context: CallbackContext) -> None:
-    val = worksheet.get("V1:AA20")
+    val = worksheet.get("AE1:AN20")
 
-    order_list = []
+    order_list = [] # собираются
 
-    if int(val[0][4]) != 0:
-        for i in range(1, int(val[0][4]) + 1):
-            order_list.append(f'{val[i][3]} — {val[i][4]} [{val[i][5]}]\n')
+    if int(val[0][1]) != 0:
+        for i in range(1, int(val[0][1]) + 1):
+            order_list.append(f'{val[i][0]} — {val[i][1]} [{val[i][2]}]\n')
     else:
         order_list.append(f'Нет заказов 😱 \n')
 
-    order_callback = []
+    order_callback = [] # собраны
 
-    if int(val[0][1]) != 0:
-        for i in range(1, int(val[0][1]) + 1):
-            order_callback.append(f'{val[i][0]}')
+    if int(val[0][5]) != 0:
+        for i in range(1, int(val[0][5]) + 1):
+            order_callback.append(f'{val[i][4]}')
 
-    order_button = []
+    order_button = [] 
 
-    if int(val[0][1]) != 0:
-        for i in range(1, int(val[0][1]) + 1):
-            order_button.append(f'{val[i][0]} — {val[i][2]}')
-        for n in range(1, (18 - int(val[0][1])) + 1):
+    if int(val[0][5]) != 0:
+        for i in range(1, int(val[0][5]) + 1):
+            order_button.append(f'{val[i][4]} — {val[i][5]}')
+        for n in range(1, (18 - int(val[0][5])) + 1):
             order_button.append('')
             order_callback.append('404')
     else:
@@ -76,7 +76,7 @@ def admin_reload(update: Update, context: CallbackContext) -> None:
                 ],
     ]
 
-    if val[0][1] == "0":
+    if val[0][5] == "0":
         text_plus = "\nВсе заказы выданы 💪"
     else:
         text_plus = ""
@@ -87,7 +87,7 @@ def admin_reload(update: Update, context: CallbackContext) -> None:
         f'Собранные:{text_plus}'
     )
 
-    if val[0][1] == "0":
+    if val[0][5] == "0":
         bot.send_message(ADMIN_CHAT, text)
 
     else:
