@@ -4,6 +4,7 @@
 # Рестарт бота systemctl restart catbot.service
 
 import pathlib
+import datetime
 
 from telegram.ext import (
     Application, CommandHandler, MessageHandler, 
@@ -13,11 +14,13 @@ from telegram.ext import (
 import cat
 from mew import talk, woof
 from admin import admin_done
+from leaderboard import dayleader
 
 from config import (
     startmessage, TOKEN, 
     ORDER_DELETE, ORDER_ADD, ORDER_DONE, 
-    SETTING_NAME, SETTING_NAME_DONE,
+    SETTING, SETTING_NAME_DONE,
+    SETTING_LEADERBOARD_ANSWER,
     )
 
 from errors import (
@@ -44,6 +47,7 @@ from command import (
 from setting import (
     setting_user, setting_edit_name, 
     setting_edit_name_done, setting_edit_name_error,
+    setting_leaderboard, setting_leaderboard_answer
     )
 
 
@@ -66,6 +70,7 @@ def main() -> None:
     # Планировщик стартового сообщения
     job_queue = ap.job_queue
     job_queue.run_once(startmessage, 1)
+    job_queue.run_daily(dayleader, datetime.time(23-3,40))
     
     
     # Слушает сообщения от всех и мявкает в ответ
@@ -97,55 +102,26 @@ def main() -> None:
     # Тестовые команды бота
     ap.add_handler(CommandHandler('id', getid))
     ap.add_handler(CommandHandler('test_voice', test_voice))
-    ap.add_handler(CommandHandler('test', test))
+    ap.add_handler(CommandHandler('test', dayleader))
 
 
     # Меню настроек
     # states определяют на какие хэндлеры реагирует бот
-    setting_handler = ConversationHandler(
-        entry_points = [CommandHandler('setting', setting_user)],
-        states = {
-            SETTING_NAME: [
-                CallbackQueryHandler(setting_edit_name, pattern='^' + str('setting_edit_name') + '$'),
-            ],
-            SETTING_NAME_DONE: [
-                MessageHandler(
-                    filters.Regex('\w{3,8}') 
-                    & ~filters.Regex('\w{9,}') 
-                    & ~filters.Regex('\W'), 
-                    setting_edit_name_done
-                    ),
-                MessageHandler(
-                    (
-                        ~filters.Regex('\w{3,8}')
-                        | filters.Regex('\w{9,}')
-                        | filters.Regex('\W')
-                        ), 
-                    setting_edit_name_error
-                    ),
-            ],
-        },
-        fallbacks = [
-            MessageHandler(filters.Regex('^[О,о]тмен'), order_cancel),
-            MessageHandler(filters.Regex('^[З,з]акр'), order_close),
-            ],
-    )
-    
-
-    # Слушает личку и запускает меню заказа
-    order_handler = ConversationHandler(
+    Conversation_handler = ConversationHandler(
         entry_points = [MessageHandler(
             filters.Regex('\d{6}-\d{6}') 
             & filters.ChatType.PRIVATE, 
             order_user
-            )],
+            ),
+            CommandHandler('setting', setting_user)
+        ],
         states = {
             ORDER_DELETE: [
                 MessageHandler(
                     filters.Regex('^\d{,2}$') 
                     & ~filters.Regex('\d{6}-\d{6}') 
-                    & ~filters.Regex('^[+]\d{,2}$')
-                    , delete_answer
+                    & ~filters.Regex('^[+]\d{,2}$'), 
+                    delete_answer
                     ),
                 MessageHandler(
                     filters.TEXT 
@@ -155,12 +131,17 @@ def main() -> None:
                     & ~filters.Regex('^[+]\d{,2}$'), 
                     error_answer
                     ),
-                MessageHandler(filters.Regex('\d{6}-\d{6}'), error_order),
+                #MessageHandler(filters.Regex('\d{6}-\d{6}'), error_order),
                 MessageHandler(
                     filters.Regex('^[+]\d{,2}$') 
-                    & ~filters.Regex('^\d{,2}$') 
+                    & ~filters.Regex('^\d{,2}$')
                     & ~filters.Regex('\d{6}-\d{6}'), 
                     add_min
+                    ),
+                MessageHandler(
+                    filters.Regex('\d{6}-\d{6}') 
+                    & filters.ChatType.PRIVATE, 
+                    order_user
                     ),
                 CallbackQueryHandler(delete_answer, pattern='^' + str('\d{1}') + '$'),
                 CallbackQueryHandler(add_pos, pattern='^' + str('add_pos') + '$'),
@@ -175,13 +156,69 @@ def main() -> None:
                     & ~filters.Regex('(^[О,о]тмен|^[З,з]акр)'),
                     add_answer
                     ),
+                MessageHandler(
+                    filters.Regex('\d{6}-\d{6}') 
+                    & filters.ChatType.PRIVATE, 
+                    order_user
+                    ),
                 MessageHandler(~filters.Regex('^\d{,2}$'), error_add),
                 CallbackQueryHandler(delete_back, pattern='^' + str('delete_back') + '$'),
             ],
             ORDER_DONE: [
                 MessageHandler(filters.PHOTO, done),
-                MessageHandler(filters.Regex('\d{6}-\d{6}'), error_done),
+                #MessageHandler(filters.Regex('\d{6}-\d{6}'), error_done),
                 CallbackQueryHandler(delete_back, pattern='^' + str('delete_back') + '$'),
+                MessageHandler(
+                    filters.Regex('\d{6}-\d{6}') 
+                    & filters.ChatType.PRIVATE, 
+                    order_user
+                    ),
+            ],
+            SETTING: [
+                CallbackQueryHandler(setting_edit_name, pattern='^' + str('setting_edit_name') + '$'),
+                CallbackQueryHandler(setting_leaderboard, pattern='^' + str('setting_leaderboard') + '$'),
+                MessageHandler(
+                    filters.Regex('\d{6}-\d{6}') 
+                    & filters.ChatType.PRIVATE, 
+                    order_user
+                ),
+                CommandHandler('setting', setting_user)
+            ],
+            SETTING_NAME_DONE: [
+                MessageHandler(
+                    filters.Regex('\w{3,8}') 
+                    & ~filters.Regex('\w{9,}') 
+                    & ~filters.Regex('\W')
+                    & ~filters.Regex('\d{6}-\d{6}')
+                    & ~filters.Regex('(^[З,з]акр)'), 
+                    setting_edit_name_done
+                    ),
+                MessageHandler(
+                    (
+                        ~filters.Regex('\w{3,8}')
+                        | filters.Regex('\w{9,}')
+                        | filters.Regex('\W')
+                        )
+                    & ~filters.Regex('\d{6}-\d{6}')
+                    & ~filters.Regex('(^[З,з]акр)'), 
+                    setting_edit_name_error
+                    ),
+                MessageHandler(
+                    filters.Regex('\d{6}-\d{6}') 
+                    & filters.ChatType.PRIVATE, 
+                    order_user
+                ),
+                CallbackQueryHandler(setting_user, pattern='^' + str('setting_user') + '$'),
+            ],
+            SETTING_LEADERBOARD_ANSWER: [
+                CallbackQueryHandler(setting_leaderboard_answer, pattern='^' + str('(leaderboard_on|leaderboard_off)') + '$'),
+                CallbackQueryHandler(setting_user, pattern='^' + str('setting_user') + '$'),
+                MessageHandler(
+                    filters.Regex('\d{6}-\d{6}') 
+                    & filters.ChatType.PRIVATE, 
+                    order_user
+                ),
+                CommandHandler('setting', setting_user)
             ],
         },
         fallbacks = [
@@ -191,6 +228,7 @@ def main() -> None:
         name = 'conversationhandler',
         persistent = True,
     )
+
         
     # Обработчик для админки
     ap.add_handler(CallbackQueryHandler(admin_done, pattern='^' + str('\d{6}') + '$'))
@@ -199,8 +237,7 @@ def main() -> None:
     ap.add_error_handler(error_handler)
 
     # Обработчик ConversationHandler
-    ap.add_handler(setting_handler)
-    ap.add_handler(order_handler)
+    ap.add_handler(Conversation_handler)
 
     ap.run_polling(stop_signals=None)
 

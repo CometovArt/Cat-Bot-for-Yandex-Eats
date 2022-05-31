@@ -7,3 +7,4 @@ service/
 voice/
 testartem.session
 CometovArt_Yandex.session
+addClient.py

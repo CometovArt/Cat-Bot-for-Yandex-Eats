@@ -37,15 +37,15 @@ async def admin_reload(update: Update, context: CallbackContext) -> None:
             order_button.append('')
             order_callback.append('404')
 
-    # order_time = [] # просрочены
+    order_time = [] # просрочены
 
-    # if int(val[0][8]) != 0:
-    #     order_time.append(f'Просроченные заказы:\n')
-    #     for i in range(1, int(val[0][8]) + 1):
-    #         order_time.append(f'{val[i][7]} — {val[i][8]} [{val[i][9]}]\n')
-    #     order_time.append(f'\n')
-    # else:
-    #     order_time.append('')
+    if int(val[0][8]) != 0:
+        order_time.append(f'Просроченные заказы:\n')
+        for i in range(1, int(val[0][8]) + 1):
+            order_time.append(f'{val[i][7]} — {val[i][8]} [{val[i][9]}]\n')
+        order_time.append(f'\n')
+    else:
+        order_time.append('')
 
     keyboard = [
                 [
@@ -94,7 +94,7 @@ async def admin_reload(update: Update, context: CallbackContext) -> None:
     text = (
         f'Собираются:\n'
         f'{"".join(order_list)}\n'
-        # f'{"".join(order_time)}'
+        f'{"".join(order_time)}'
         f'Собранные:{text_plus}'
     )
 

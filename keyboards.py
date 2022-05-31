@@ -29,8 +29,9 @@ keyboard_delete = [
         ],
 ]
 
-keyboard_name = [
+keyboard_setting = [
         [
             InlineKeyboardButton("Изменить имя", callback_data=str('setting_edit_name')),
+            InlineKeyboardButton("Участие в рейтингах", callback_data=str('setting_leaderboard')),
         ],
 ]

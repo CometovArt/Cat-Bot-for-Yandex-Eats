@@ -13,12 +13,27 @@ from keyboards import keyboard_delete, keyboard_change
 
 # Бот получил сообщение с заказом
 async def order_user(update: Update, context: CallbackContext) -> None:
-    # Собираем данные о заказе
     update = update.message
-    message = update.text
     user = update.from_user.username
+    try:
+        pre_scan = worksheet.findall(user)[-1]
+    except:
+        check = worksheet.cell(pre_scan.row, 8).value
+        print(check)
+        if check == None:
+            time_now = datetime.now().strftime("%H:%M")
+            worksheet.update_cell(pre_scan.row, 8, time_now)  
+    else:
+        check = worksheet.cell(pre_scan.row, 8).value
+        print(check)
+        if check == None:
+            time_now = datetime.now().strftime("%H:%M")
+            worksheet.update_cell(pre_scan.row, 8, time_now)  
+        
+    # Собираем данные о заказе
+    message = update.text
+    time_now = datetime.now().strftime("%H:%M")
     day = datetime.now().strftime("%d.%m")
-    timez = datetime.now().strftime("%H:%M")
     strings = re.findall(r'\n', message)
     order = re.search(r'\d{6}-\d{6}', message)
     time_end = re.search(r'\d\d:\d\d', message)
@@ -37,7 +52,7 @@ async def order_user(update: Update, context: CallbackContext) -> None:
     worksheet.update_cell(val, 1, day)                  # день сборки
     worksheet.update_cell(val, 2, order.group(0))       # номер закака
     worksheet.update_cell(val, 3, user)                 # ник сборщика
-    worksheet.update_cell(val, 4, timez)                # время начала сборки
+    worksheet.update_cell(val, 4, time_now)                # время начала сборки
     worksheet.update_cell(val, 5, len(strings)-13)      # количество позиций
     worksheet.update_cell(val, 9, time_end.group(0))    # время доставки
     await admin_reload(update, context)
@@ -122,7 +137,7 @@ async def add_min(update: Update, context: CallbackContext) -> None:
     update = update.message
     minute = re.search('\d{1,2}', update.text) # сколько минут добавилось
     text = (
-        f'Я добавил к твоему времени {min.group(0)} минут. А теперь выбери нужное количество на кнопке, или напиши количество удалений цифрой.'
+        f'Я добавил к твоему времени {minute.group(0)} минут. А теперь выбери нужное количество на кнопке, или напиши количество удалений цифрой.'
     )
     await update.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_delete))
     # Записываем удаления в таблицу
@@ -142,11 +157,12 @@ async def done(update: Update, context: CallbackContext) -> None:
     worksheet.update_cell(scan.row, 8, time_now)
     val = worksheet.get('A{}:AC{}'.format(scan.row, scan.row))
     text = (
-        f'*Заказ {val[0][1]} успешно закрыт!* Твоя статистика за заказ:\n'
-        f'🛒 Корзина: *{val[0][15]}*, ⏳ Время на позицию: *{val[0][16]}*\n\n'
-        f'Твоя статистика за день:\n'
-        f'🛒 Корзина: *{val[0][19]}*, ⏳ Время на позицию: *{val[0][20]}*, 💵 Ставка: *{val[0][21]}*, Заказов: *{val[0][22]}*\n\n'
-        f'Пересылай следующий заказ, как только придёт :)'
+        f'*Заказ {val[0][1]} успешно закрыт!*\nТвоя статистика за заказ:\n\n'
+        f'🛒 Корзина: *{val[0][15]}*, ⏳ На позицию: *{val[0][16]}*\n\n'
+        f'Твоя статистика за сегодня:\n\n'
+        f'🛒 Корзина: *{val[0][19]}*, ⏳ На позицию: *{val[0][20]}*,'
+        f'💵 Прогноз по ставке: *{val[0][21]}*, 📦 Заказов: *{val[0][22]}*\n\n'
+        f'Жду следующий заказ ;)'
     )
     text_order = (
         f'Чек по заказу {val[0][1]}:'
@@ -169,11 +185,12 @@ async def done_photo(update: Update, context: CallbackContext) -> None:
     worksheet.update_cell(scan.row, 8, time)
     val = worksheet.get('A{}:AC{}'.format(scan.row, scan.row))
     text = (
-        f'*Заказ {val[0][1]} успешно закрыт!* Твоя статистика за заказ:\n'
-        f'🛒 Корзина: *{val[0][15]}*, ⏳ Время на позицию: *{val[0][16]}*\n\n'
-        f'Твоя статистика за день:\n'
-        f'🛒 Корзина: *{val[0][19]}*, ⏳ Время на позицию: *{val[0][20]}*,\n 💵 Ставка: *{val[0][21]}*, Заказов: *{val[0][22]}*\n\n'
-        f'Пересылай следующий заказ, как только придёт :)'
+        f'*Заказ {val[0][1]} успешно закрыт!*\nТвоя статистика за заказ:\n\n'
+        f'🛒 Корзина: *{val[0][15]}*, ⏳ На позицию: *{val[0][16]}*\n\n'
+        f'Твоя статистика за сегодня:\n\n'
+        f'🛒 Корзина: *{val[0][19]}*, ⏳ На позицию: *{val[0][20]}*,'
+        f'💵 Прогноз по ставке: *{val[0][21]}*, 📦 Заказов: *{val[0][22]}*\n\n'
+        f'Жду следующий заказ ;)'
     )
     text_order = (
         f'Чек по заказу {val[0][1]}:'
@@ -214,7 +231,7 @@ async def order_cancel(update: Update, context: CallbackContext) -> None:
 
 
 async def order_close(update: Update, context: CallbackContext) -> None:
-    text = (f'Заказ отменён. Жду следующего ;)')
+    text = (f'Ну ты пиши если что ;)')
     await update.message.reply_text(text)
 
     return ConversationHandler.END
