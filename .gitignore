@@ -5,3 +5,5 @@ config.py
 __pycache__/
 service/
 voice/
+testartem.session
+CometovArt_Yandex.session

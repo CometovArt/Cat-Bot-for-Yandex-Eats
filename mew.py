@@ -13,7 +13,7 @@ async def talk(update: Update, context: CallbackContext) -> None:
     random_voice = lambda: random.choice(cat.voice)
     random_sticker = lambda: random.choice(cat.sticker)
 
-    stat = lambda: random.choice(['1','2','3'])
+    stat = lambda: random.choice(['1','1','3'])
 
     if stat() == "1":
         await update.message.reply_text(random_message())

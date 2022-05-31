@@ -1,9 +1,8 @@
 from telegram import Update, InlineKeyboardMarkup
 from telegram.ext import CallbackContext, ConversationHandler
 
-import random
+#import random
 import re
-import time
 from datetime import datetime
 
 import cat
@@ -11,19 +10,18 @@ from config import bot, worksheet, CHECK_CHAT, ORDER_DELETE, ORDER_ADD, ORDER_DO
 from admin import admin_reload
 from keyboards import keyboard_delete, keyboard_change
 
-from config import logger
 
 # Бот получил сообщение с заказом
 async def order_user(update: Update, context: CallbackContext) -> None:
     # Собираем данные о заказе
-    upd = update.message
-    msg = upd.text
-    user = upd.from_user.username
+    update = update.message
+    message = update.text
+    user = update.from_user.username
     day = datetime.now().strftime("%d.%m")
     timez = datetime.now().strftime("%H:%M")
-    strings = re.findall(r'\n', msg)
-    order = re.search(r'\d{6}-\d{6}', msg)
-    time_end = re.search(r'\d\d:\d\d', msg)
+    strings = re.findall(r'\n', message)
+    order = re.search(r'\d{6}-\d{6}', message)
+    time_end = re.search(r'\d\d:\d\d', message)
     # Собираем сообщение о заказе
     text = (
         f'*Успехов в сборррке заказа {order.group(0)}!* 😽\n\n'
@@ -34,7 +32,7 @@ async def order_user(update: Update, context: CallbackContext) -> None:
         f'Если удалений небыло, то можешь сразу прислать фото чека!'
     )
     # Отправляем данные в чат и таблицу
-    await upd.reply_text(text, parse_mode='markdown', reply_markup=InlineKeyboardMarkup(keyboard_delete))
+    await update.reply_text(text, parse_mode='markdown', reply_markup=InlineKeyboardMarkup(keyboard_delete))
     val = worksheet.cell(1, 1).value                    # номер свободной ячейки
     worksheet.update_cell(val, 1, day)                  # день сборки
     worksheet.update_cell(val, 2, order.group(0))       # номер закака
@@ -53,19 +51,20 @@ async def delete_answer(update: Update, context: CallbackContext) -> None:
     try:
         check = query.data
     except:
-        upd = update.message
-        delete = upd.text
-        user = upd.from_user.username
+        update = update.message
+        delete = update.text
+        user = update.from_user.username
     else:
         await query.answer()
+        await query.edit_message_reply_markup(reply_markup=None)
         delete = check
-        upd = query.message
-        user = query.message.chat.username
+        update = query.message
+        user = update.chat.username
     text = (
         f'*Я записал твои удаления!* 🖍\n\nТеперь жду фото чека ;)\n'
         f'_Пожалуйста, пришли его сразу после того, как отсканируешь_'
     )
-    await upd.reply_text(text, parse_mode='markdown', reply_markup=InlineKeyboardMarkup(keyboard_change))
+    await update.reply_text(text, parse_mode='markdown', reply_markup=InlineKeyboardMarkup(keyboard_change))
     # Записываем удаления в таблицу
     scan = worksheet.findall(user)[-1] # ищем последний заказ
     worksheet.update_cell(scan.row, 6, delete)
@@ -81,6 +80,7 @@ async def add_pos(update: Update, context: CallbackContext) -> None:
         f'У тебя добавились позиции, отлично!\n\n'
         f'Пришли сообщением сколько их у тебя'
     )
+    await query.edit_message_reply_markup(reply_markup=None)
     await query.message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_change))
 
     return ORDER_ADD
@@ -88,16 +88,16 @@ async def add_pos(update: Update, context: CallbackContext) -> None:
 
 # Ответ на успешню запись
 async def add_answer(update: Update, context: CallbackContext) -> None:
-    upd = update.message
-    add = upd.text # количество добавлений
+    update = update.message
+    add = update.text # количество добавлений
     text = (
         f'Я записал новые позиции ;) Теперь жду фото чека\n'
         f'Пожалуйста, пришли его сразу после того, как отсканируешь'
     )
-    await upd.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_change))
+    await update.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_change))
     # Записываем удаления в таблицу
     numb = f'-{add}'
-    user = upd.from_user.username
+    user = update.from_user.username
     scan = worksheet.findall(user)[-1] # ищем последний заказ
     worksheet.update_cell(scan.row, 6, numb)
 
@@ -111,6 +111,7 @@ async def delete_back(update: Update, context: CallbackContext) -> None:
     text = (
         f'Теперь ты можешь еще раз отметить количество удалений:'
     )
+    await query.edit_message_reply_markup(reply_markup=None)
     await query.message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_delete))
 
     return ORDER_DELETE
@@ -118,26 +119,27 @@ async def delete_back(update: Update, context: CallbackContext) -> None:
 
 # Добавляем минуты
 async def add_min(update: Update, context: CallbackContext) -> None:
-    upd = update.message
-    min = re.search('\d{1,2}', upd.text) # сколько минут добавилось
+    update = update.message
+    minute = re.search('\d{1,2}', update.text) # сколько минут добавилось
     text = (
         f'Я добавил к твоему времени {min.group(0)} минут. А теперь выбери нужное количество на кнопке, или напиши количество удалений цифрой.'
     )
-    await upd.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_delete))
+    await update.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard_delete))
     # Записываем удаления в таблицу
-    user = upd.from_user.username
+    user = update.from_user.username
     scan = worksheet.findall(user)[-1] # ищем последний заказ
-    worksheet.update_cell(scan.row, 7, min.group(0))
+    worksheet.update_cell(scan.row, 7, minute.group(0))
 
     return ORDER_DELETE
 
 
 # Закрываем заказ
 async def done(update: Update, context: CallbackContext) -> None:
-    user = update.effective_user.username
-    timez = datetime.now().strftime("%H:%M")
+    update = update.message
+    user = update.from_user.username
+    time_now = datetime.now().strftime("%H:%M")
     scan = worksheet.findall(user)[-1]
-    worksheet.update_cell(scan.row, 8, timez)
+    worksheet.update_cell(scan.row, 8, time_now)
     val = worksheet.get('A{}:AC{}'.format(scan.row, scan.row))
     text = (
         f'*Заказ {val[0][1]} успешно закрыт!* Твоя статистика за заказ:\n'
@@ -149,9 +151,9 @@ async def done(update: Update, context: CallbackContext) -> None:
     text_order = (
         f'Чек по заказу {val[0][1]}:'
     )
-    await update.effective_message.reply_text(text, parse_mode='markdown')
+    await update.reply_text(text, parse_mode='markdown')
     await bot.send_message(CHECK_CHAT, text_order)
-    await update.message.forward(CHECK_CHAT)
+    await update.forward(CHECK_CHAT)
     await admin_reload(update, context)
 
     return ConversationHandler.END
@@ -159,7 +161,8 @@ async def done(update: Update, context: CallbackContext) -> None:
 
 # Закрываем заказ после фото чека
 async def done_photo(update: Update, context: CallbackContext) -> None:
-    user = update.effective_user.username
+    update = update.message
+    user = update.from_user.username
     time = datetime.now().strftime("%H:%M")
     scan = worksheet.findall(user)[-1]
     worksheet.update_cell(scan.row, 6, "0")
@@ -175,11 +178,11 @@ async def done_photo(update: Update, context: CallbackContext) -> None:
     text_order = (
         f'Чек по заказу {val[0][1]}:'
     )
-    await update.effective_message.reply_text(text, parse_mode='markdown')
-    random_sticker = lambda: random.choice(cat.sticker)
-    await update.effective_message.reply_sticker(sticker=random_sticker())
+    await update.reply_text(text, parse_mode='markdown')
+    #random_sticker = lambda: random.choice(cat.sticker)
+    #await update.reply_sticker(sticker=random_sticker())
     await bot.send_message(CHECK_CHAT, text_order)
-    await update.message.forward(CHECK_CHAT)
+    await update.forward(CHECK_CHAT)
     await admin_reload(update, context)
 
     return ConversationHandler.END
@@ -187,18 +190,20 @@ async def done_photo(update: Update, context: CallbackContext) -> None:
 
 # Отменяем заказ
 async def order_cancel(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
     try:
-        update.callback_query.data
+        query.data
     except:
-        msg = update.message
-        user = msg.from_user.username
+        update = update.message
+        user = update.from_user.username
     else:
-        await update.callback_query.answer()
-        msg = update.effective_message
-        user = update.effective_user.username
+        await query.answer()
+        await query.edit_message_reply_markup(reply_markup=None)
+        update = query.message
+        user = update.chat.username
         
     text = (f'Заказ отменён. Жду следующего ;)')
-    await msg.reply_text(text)
+    await update.reply_text(text)
     
     # Записываем удаления в таблицу
     scan = worksheet.findall(user)[-1] # ищем последний заказ
@@ -210,6 +215,6 @@ async def order_cancel(update: Update, context: CallbackContext) -> None:
 
 async def order_close(update: Update, context: CallbackContext) -> None:
     text = (f'Заказ отменён. Жду следующего ;)')
-    await update.effective_message.reply_text(text)
+    await update.message.reply_text(text)
 
     return ConversationHandler.END

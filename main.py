@@ -67,6 +67,7 @@ def main() -> None:
     job_queue = ap.job_queue
     job_queue.run_once(startmessage, 1)
     
+    
     # Слушает сообщения от всех и мявкает в ответ
     # Фразы берёт из cat.py
     ap.add_handler(
@@ -98,6 +99,7 @@ def main() -> None:
     ap.add_handler(CommandHandler('test_voice', test_voice))
     ap.add_handler(CommandHandler('test', test))
 
+
     # Меню настроек
     # states определяют на какие хэндлеры реагирует бот
     setting_handler = ConversationHandler(
@@ -127,8 +129,8 @@ def main() -> None:
             MessageHandler(filters.Regex('^[О,о]тмен'), order_cancel),
             MessageHandler(filters.Regex('^[З,з]акр'), order_close),
             ],
-        per_user = True,
     )
+    
 
     # Слушает личку и запускает меню заказа
     order_handler = ConversationHandler(
@@ -188,9 +190,8 @@ def main() -> None:
             ],
         name = 'conversationhandler',
         persistent = True,
-        per_user = True,
     )
-
+        
     # Обработчик для админки
     ap.add_handler(CallbackQueryHandler(admin_done, pattern='^' + str('\d{6}') + '$'))
     
