@@ -18,11 +18,7 @@ async def order_user(update: Update, context: CallbackContext) -> None:
     try:
         pre_scan = worksheet.findall(user)[-1]
     except:
-        check = worksheet.cell(pre_scan.row, 8).value
-        print(check)
-        if check == None:
-            time_now = datetime.now().strftime("%H:%M")
-            worksheet.update_cell(pre_scan.row, 8, time_now)  
+        update
     else:
         check = worksheet.cell(pre_scan.row, 8).value
         print(check)

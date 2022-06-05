@@ -1,9 +1,10 @@
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext
 
+from datetime import datetime
 import re
 
-from config import bot, worksheet, ADMIN_CHAT
+from config import DEV_CHAT, worksheet, ADMIN_CHAT
 
 
 # Список заказов в админку
@@ -96,14 +97,17 @@ async def admin_reload(update: Update, context: CallbackContext) -> None:
         f'{"".join(order_list)}\n'
         f'{"".join(order_time)}'
         f'Собранные:{text_plus}'
+        f'{datetime.now().strftime("%H-%M-%S")}'
     )
+    try:
+        if val[0][5] == "0":
+            await context.bot.edit_message_text(text, ADMIN_CHAT, 1543)
 
-    if val[0][5] == "0":
-        await bot.send_message(ADMIN_CHAT, text)
-
-    else:
-        reply_markup = InlineKeyboardMarkup(keyboard)
-        await bot.send_message(ADMIN_CHAT, text, reply_markup=reply_markup)
+        else:
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await context.bot.edit_message_text(text, ADMIN_CHAT, 1543, reply_markup=reply_markup)
+    except:
+        await context.bot.send_message(chat_id=DEV_CHAT, text='Админка не обновилась')
 
 
 # Отмечаем выданный заказ

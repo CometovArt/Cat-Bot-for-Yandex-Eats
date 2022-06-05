@@ -14,7 +14,7 @@ from telegram.ext import (
 import cat
 from mew import talk, woof
 from admin import admin_done
-from leaderboard import dayleader
+from leaderboard import dayleader, dayleaders
 
 from config import (
     startmessage, TOKEN, 
@@ -103,6 +103,7 @@ def main() -> None:
     ap.add_handler(CommandHandler('id', getid))
     ap.add_handler(CommandHandler('test_voice', test_voice))
     ap.add_handler(CommandHandler('test', dayleader))
+    ap.add_handler(CommandHandler('dayleaders', dayleaders))
 
 
     # Меню настроек
